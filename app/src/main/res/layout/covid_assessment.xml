@@ -136,31 +136,31 @@
                             android:orientation="vertical">
 
                             <CheckBox
-                                android:id="@+id/checkBox"
+                                android:id="@+id/checkBox1Yes"
                                 android:layout_width="match_parent"
                                 android:layout_height="20dp"
                                 android:text="@string/covid_assessment_ques1_chkbx1" />
 
                             <CheckBox
-                                android:id="@+id/checkBox2"
+                                android:id="@+id/checkBox2Yes"
                                 android:layout_width="match_parent"
                                 android:layout_height="35dp"
                                 android:text="@string/covid_assessment_ques1_chkbx1" />
 
                             <CheckBox
-                                android:id="@+id/checkBox3"
+                                android:id="@+id/checkBox3Yes"
                                 android:layout_width="match_parent"
                                 android:layout_height="20dp"
                                 android:text="@string/covid_assessment_ques1_chkbx1" />
 
                             <CheckBox
-                                android:id="@+id/checkBox4"
+                                android:id="@+id/checkBox4Yes"
                                 android:layout_width="match_parent"
                                 android:layout_height="35dp"
                                 android:text="@string/covid_assessment_ques1_chkbx1" />
 
                             <CheckBox
-                                android:id="@+id/checkBox5"
+                                android:id="@+id/checkBox5Yes"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="@string/covid_assessment_ques1_chkbx1" />
@@ -172,31 +172,31 @@
                             android:orientation="vertical">
 
                             <CheckBox
-                                android:id="@+id/checkBox6"
+                                android:id="@+id/checkBox1No"
                                 android:layout_width="match_parent"
                                 android:layout_height="21dp"
                                 android:text="@string/covid_assessment_ques1_chkbx2" />
 
                             <CheckBox
-                                android:id="@+id/checkBox7"
+                                android:id="@+id/checkBox2No"
                                 android:layout_width="match_parent"
                                 android:layout_height="35dp"
                                 android:text="@string/covid_assessment_ques1_chkbx2" />
 
                             <CheckBox
-                                android:id="@+id/checkBox8"
+                                android:id="@+id/checkBox3No"
                                 android:layout_width="match_parent"
                                 android:layout_height="20dp"
                                 android:text="@string/covid_assessment_ques1_chkbx2" />
 
                             <CheckBox
-                                android:id="@+id/checkBox10"
+                                android:id="@+id/checkBox4No"
                                 android:layout_width="match_parent"
                                 android:layout_height="34dp"
                                 android:text="@string/covid_assessment_ques1_chkbx2" />
 
                             <CheckBox
-                                android:id="@+id/checkBox9"
+                                android:id="@+id/checkBox5No"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="@string/covid_assessment_ques1_chkbx2" />
@@ -223,31 +223,24 @@
                         android:layout_width="match_parent"
                         android:layout_height="31dp"
                         android:orientation="horizontal"
-                        android:paddingLeft="10dp"
-                        android:paddingRight="20dp">
+                        android:paddingLeft="70dp"
+                        android:paddingRight="25dp">
 
                         <CheckBox
-                            android:id="@+id/checkBox11"
-                            android:layout_width="10dp"
+                            android:id="@+id/checkBox6Yes"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="center"
                             android:layout_weight="1"
-                            android:foregroundGravity="center"
-                            android:gravity="center"
-                            android:paddingLeft="10dp"
+                            android:gravity="clip_vertical|start"
                             android:text="@string/covid_assessment_ques1_chkbx1"
-                            android:textAlignment="viewStart"
-                            android:translationX="60dp" />
+                            android:textAlignment="viewStart" />
 
                         <CheckBox
-                            android:id="@+id/checkBox12"
-                            android:layout_width="10dp"
+                            android:id="@+id/checkBox6No"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:paddingLeft="10dp"
-                            android:paddingRight="10dp"
-                            android:text="@string/covid_assessment_ques1_chkbx2"
-                            android:translationX="30dp" />
+                            android:text="@string/covid_assessment_ques1_chkbx2" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -274,7 +267,7 @@
                         android:paddingRight="25dp">
 
                         <CheckBox
-                            android:id="@+id/checkBox13"
+                            android:id="@+id/checkBox7Yes"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -282,7 +275,7 @@
                             android:text="@string/covid_assessment_ques1_chkbx1" />
 
                         <CheckBox
-                            android:id="@+id/checkBox14"
+                            android:id="@+id/checkBox7No"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
