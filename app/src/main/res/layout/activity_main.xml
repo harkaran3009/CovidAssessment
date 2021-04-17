@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    app:layout_anchorGravity="center"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/Theme.CovidAssessment.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/Theme.CovidAssessment.PopupOverlay" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="387dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="302dp"
+                app:srcCompat="@drawable/covid" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="83dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="Welcome to the Covid Screening App"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                tools:text="@string/covid_home_banner" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="195dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/button"
+                    android:layout_width="176dp"
+                    android:layout_height="77dp"
+                    android:layout_gravity="center"
+                    android:foregroundGravity="center_vertical"
+                    android:gravity="center"
+                    android:onClick="button1Click"
+                    android:text="@string/button_1"
+                    android:translationY="30dp" />
+
+                <Button
+                    android:id="@+id/button2"
+                    android:layout_width="176dp"
+                    android:layout_height="77dp"
+                    android:layout_gravity="center"
+                    android:foregroundGravity="center_vertical"
+                    android:gravity="center"
+                    android:text="@string/button_3"
+                    android:translationY="35dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/button3"
+                    android:layout_width="176dp"
+                    android:layout_height="77dp"
+                    android:layout_gravity="center"
+                    android:text="@string/button_2"
+                    android:translationY="30dp" />
+
+                <Button
+                    android:id="@+id/button4"
+                    android:layout_width="177dp"
+                    android:layout_height="77dp"
+                    android:layout_gravity="center"
+                    android:text="@string/button_4"
+                    android:translationY="35dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

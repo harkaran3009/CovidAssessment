@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">CovidAssessment</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="covid_home_banner">Welcome to the Covid Screening App</string>
+    <string name="button_1">Covid Screening</string>
+    <string name="button_2">Vaccine Registeration</string>
+    <string name="button_3">Covid Test Book</string>
+    <string name="button_4">Covid Info</string>
+    <string name="covid_assessment_head">Screening Questions</string>
+    <string name="covid_assessment_ques1">1. Are you currently experiencing any of these issues?</string>
+    <string name="covid_assessment_ques2">2. Have you travelled outside country in the last 14 days?</string>
+    <string name="covid_assessment_ques3">3. Have you had close contact with a confirmed or probable COVID-19?</string>
+
+    <string name="covid_assessment_ques1_op1">Fever or Chills</string>
+    <string name="covid_assessment_ques1_op2">Difficulty Breathing or Shortness of Breath</string>
+    <string name="covid_assessment_ques1_op3">Cough</string>
+    <string name="covid_assessment_ques1_op4">Sore Throat, trouble Swallowing</string>
+    <string name="covid_assessment_ques1_op5">Runny Nose</string>
+    <string name="covid_assessment_ques1_op6">Nausea, Vomiting, Diarrhea</string>
+
+    <string name="covid_assessment_ques1_chkbx1">Yes</string>
+    <string name="covid_assessment_ques1_chkbx2">No</string>
+
+    <string name="covid_assessment_button">Next</string>
+
+
+
+</resources>
