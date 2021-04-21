@@ -31,6 +31,43 @@
 
     <string name="covid_assessment_button">Next</string>
 
+    <string name="vaccine_registeration">Book a COVID-19 vaccine appointment</string>
+
+    <string name="full_name">Full Name</string>
+    <string name="adress">Address</string>
+    <string name="id_type">Identification Type</string>
+    <string name="id_number">Identification #</string>
+    <string name="eligible">Eligible Group</string>
+    <string name="date">Date</string>
+    <string name="centre">Centre</string>
+    <string name="submit">Submit</string>
+    <string name="dateFormat">dd/mm/yyyy</string>
+    <string name="vaccineBookCheck">Check Vaccine Booking</string>
+    <string name="vaccineBookCheckTitle">Check your booking details</string>
+    <string name="fetchBookingdetail">Fetch Details</string>
+
+    <string-array name="id_type">
+        <item>Driving License</item>
+        <item>Passport</item>
+        <item>Health Card</item>
+    </string-array>
+
+    <string-array name="eligible_group">
+        <item>50 Years or older</item>
+        <item>Health Workers</item>
+        <item>Essential Worker</item>
+    </string-array>
+
+    <string-array name="select_centre">
+        <item>HR Hospital, Toronto</item>
+        <item>VS Hospital, Vancouver</item>
+        <item>SD Hospital, Scarborough</item>
+    </string-array>
+
+
+
+
+
 
 
 </resources>

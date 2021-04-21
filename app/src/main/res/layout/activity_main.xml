@@ -51,7 +51,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="197dp"
             android:orientation="horizontal">
 
             <LinearLayout
@@ -91,6 +91,7 @@
                     android:layout_width="176dp"
                     android:layout_height="77dp"
                     android:layout_gravity="center"
+                    android:onClick="button3Click"
                     android:text="@string/button_2"
                     android:translationY="30dp" />
 
@@ -102,6 +103,22 @@
                     android:text="@string/button_4"
                     android:translationY="35dp" />
             </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="177dp"
+            android:layout_height="77dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button7"
+                android:layout_width="177dp"
+                android:layout_height="77dp"
+                android:layout_weight="1"
+                android:onClick="button7Click"
+                android:text="@string/vaccineBookCheck" />
         </LinearLayout>
 
     </LinearLayout>
