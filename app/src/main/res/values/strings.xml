@@ -10,10 +10,10 @@
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="covid_home_banner">Welcome to the Covid Screening App</string>
-    <string name="button_1">Covid Screening</string>
-    <string name="button_2">Vaccine Registeration</string>
-    <string name="button_3">Covid Test Book</string>
-    <string name="button_4">Covid Info</string>
+    <string name="button_1">Self Screening Tool</string>
+    <string name="button_2">Book a Vaccine Appointment</string>
+    <string name="button_3">Book a COVID Test</string>
+    <string name="button_4">Get COVID Updates</string>
     <string name="covid_assessment_head">Screening Questions</string>
     <string name="covid_assessment_ques1">1. Are you currently experiencing any of these issues?</string>
     <string name="covid_assessment_ques2">2. Have you travelled outside country in the last 14 days?</string>
@@ -132,6 +132,22 @@
 
     <string name="covidtest1"></string>
     <string name="covidtest2">Upcoming booking for</string>
+
+    <!-- Covid Home Page -->
+    <string name="messagecovid">Stay at home except for essential travel and follow the <a href="https://covid-19.ontario.ca/zones-and-restrictions"></a>restrictions and public health measures</string>
+    <string name="covidhome"></string>
+    <string name="covidtext">Get the latest case data and updates, learn how to protect yourself and others</string>
+    <string name="covidvaccine">COVID-19 Vaccine</string>
+    <string name="covidvaccine1">Vaccine booking system is now available.</string>
+    <string name="covidinfo">Think you might have COVID-19(coronavirus)?</string>
+    <string name="covidinfo1">Screen for COVID-19 before you go to school,work or other work public place</string>
+    <string name="covidinfo2">Book Appointment for testing</string>
+    <string name="covidwarning"></string>
+
+    <!-- Covid Test Confirm Page -->
+    <string name="covidtestinfo">Information on getting tested</string>
+    <string name="covidtestinfo1">You must have your Health Card to be tested. Please bring your Driver’s License too if you have one.</string>
+
 
 
 </resources>

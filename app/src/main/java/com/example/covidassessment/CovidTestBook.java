@@ -30,7 +30,7 @@ public class CovidTestBook extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.covid_booking);
-        bookDate= (EditText) findViewById(R.id.coviddate);
+        //bookDate= (EditText) findViewById(R.id.coviddate);
         checkBoxTemp = (CheckBox) findViewById(R.id.checkBoxTestBook) ;
         linkText = (TextView) findViewById(R.id.covidbooking7);
         linkText.setMovementMethod(LinkMovementMethod.getInstance());
@@ -39,7 +39,38 @@ public class CovidTestBook extends AppCompatActivity {
         name = (EditText) findViewById(R.id.covidname);
         email = (EditText) findViewById(R.id.covidemail);
 
-        DatePickerDialog.OnDateSetListener date = new DatePickerDialog.OnDateSetListener() {
+
+        bookDate = findViewById(R.id.coviddate);
+        Calendar today = Calendar.getInstance();
+        Calendar noDaysAgo = (Calendar) today.clone();
+        noDaysAgo.add(Calendar.DATE, -0);
+        Calendar sevenDaysLater = (Calendar) today.clone();
+        sevenDaysLater.add(Calendar.DATE, 7);
+
+        bookDate.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Calendar calender = Calendar.getInstance();
+                int year = calender.get(Calendar.YEAR);
+                final int month = calender.get(Calendar.MONTH);
+                final int day = calender.get(Calendar.DAY_OF_MONTH);
+
+                DatePickerDialog datePickerDialog = new DatePickerDialog(CovidTestBook.this, new DatePickerDialog.OnDateSetListener() {
+                    @Override
+                    public void onDateSet(DatePicker view, int i, int i1, int i2) {
+                        bookDate.setText(day+"/"+(month+1)+"/"+year);
+
+                    }
+                },year,month,day);
+                datePickerDialog.getDatePicker().setMinDate(noDaysAgo.getTimeInMillis());
+                datePickerDialog.getDatePicker().setMaxDate(sevenDaysLater.getTimeInMillis());
+                datePickerDialog.show();
+
+
+            }
+        });
+        /*DatePickerDialog.OnDateSetListener date = new DatePickerDialog.OnDateSetListener() {
 
 
             @Override
@@ -70,7 +101,7 @@ public class CovidTestBook extends AppCompatActivity {
                 dp.show();
 
             }
-        });
+        });*/
 
     }
     private void updateLabel() {
@@ -119,6 +150,7 @@ public class CovidTestBook extends AppCompatActivity {
             i.putExtras(b);
 
             intent.putExtra("nameres", new String[] { name1,bookdate1,booktime1,centre1});
+            this.finish();
             startActivity(i);
 
         }

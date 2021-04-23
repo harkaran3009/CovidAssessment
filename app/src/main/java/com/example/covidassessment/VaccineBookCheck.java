@@ -50,7 +50,7 @@ public class VaccineBookCheck extends AppCompatActivity{
             String name = values.get(0);
             String centre = values.get(1);
             String date = values.get(2);
-            textViewEmpty.setText("Patient : " +name + " has Covid Test Booked at " + centre + " on " + date);
+            textViewEmpty.setText(name + " has Covid Test Booked at " + centre + " on " + date);
         }
 
 

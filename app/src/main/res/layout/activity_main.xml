@@ -1,128 +1,210 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_gravity="center"
-    app:layout_anchorGravity="center"
-    tools:context=".MainActivity">
+    android:layout_height="match_parent">
 
-    <com.google.android.material.appbar.AppBarLayout
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:theme="@style/Theme.CovidAssessment.AppBarOverlay">
+        tools:context=".MainActivity">
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:popupTheme="@style/Theme.CovidAssessment.PopupOverlay" />
 
-    </com.google.android.material.appbar.AppBarLayout>
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:theme="@style/Theme.CovidAssessment.AppBarOverlay">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="11dp"
+                android:background="?attr/colorPrimary"
+                android:minHeight="?attr/actionBarSize"
+                android:theme="?attr/actionBarTheme" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:background="#FFC107"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/covidwarning"
+                    android:layout_width="20dp"
+                    android:layout_height="38dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.25"
+                    android:contentDescription="@string/covidwarning"
+                    app:srcCompat="@drawable/covidwarning" />
+
+                <TextView
+                    android:id="@+id/covidrules"
+                    android:layout_width="0dip"
+                    android:layout_height="90dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="0.75"
+                    android:gravity="center"
+                    android:text="@string/messagecovid"
+                    android:textColor="#191414"
+                    android:textSize="18sp"
+                    android:textStyle="normal" />
+
+
+            </LinearLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
 
         <LinearLayout
+            android:id="@+id/linearLayout2"
             android:layout_width="match_parent"
-            android:layout_height="387dp"
-            android:orientation="vertical">
-
-            <ImageView
-                android:id="@+id/imageView"
-                android:layout_width="match_parent"
-                android:layout_height="302dp"
-                app:srcCompat="@drawable/covid" />
+            android:layout_height="804dp"
+            android:orientation="vertical"
+            app:layout_anchor="@+id/linearLayout2"
+            app:layout_anchorGravity="center">
 
             <TextView
-                android:id="@+id/textView3"
+                android:id="@+id/covidtext"
+                android:layout_width="378dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:background="#FFFCFC"
+                android:text="@string/covidtext"
+                android:textColor="#292525"
+                android:textSize="24sp" />
+
+            <View
                 android:layout_width="match_parent"
-                android:layout_height="83dp"
+                android:layout_height="1dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/covidvaccine"
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:background="#81DBE6"
+                android:gravity="center|start"
+                android:text="@string/covidvaccine"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/covidvaccine1"
+                android:layout_width="match_parent"
+                android:layout_height="33dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:background="#81DBE6"
+                android:text="@string/covidvaccine1"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:gravity="center"
-                android:text="Welcome to the Covid Screening App"
-                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-                tools:text="@string/covid_home_banner" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="197dp"
-            android:orientation="horizontal">
-
-            <LinearLayout
-                android:layout_width="195dp"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-
-                <Button
-                    android:id="@+id/button"
-                    android:layout_width="176dp"
-                    android:layout_height="77dp"
-                    android:layout_gravity="center"
-                    android:foregroundGravity="center_vertical"
-                    android:gravity="center"
-                    android:onClick="button1Click"
-                    android:text="@string/button_1"
-                    android:translationY="30dp" />
-
-                <Button
-                    android:id="@+id/button2"
-                    android:layout_width="176dp"
-                    android:layout_height="77dp"
-                    android:layout_gravity="center"
-                    android:foregroundGravity="center_vertical"
-                    android:gravity="center"
-                    android:onClick="button2Click"
-                    android:text="@string/button_3"
-                    android:translationY="35dp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-
-                <Button
-                    android:id="@+id/button3"
-                    android:layout_width="176dp"
-                    android:layout_height="77dp"
-                    android:layout_gravity="center"
-                    android:onClick="button3Click"
-                    android:text="@string/button_2"
-                    android:translationY="30dp" />
-
-                <Button
-                    android:id="@+id/button4"
-                    android:layout_width="177dp"
-                    android:layout_height="77dp"
-                    android:layout_gravity="center"
-                    android:onClick="button4Click"
-                    android:text="@string/button_4"
-                    android:translationY="35dp" />
-            </LinearLayout>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="177dp"
-            android:layout_height="77dp"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:orientation="horizontal">
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:onClick="button3Click"
+                android:text="@string/button_2"
+                android:translationY="30dp" />
 
             <Button
                 android:id="@+id/button7"
-                android:layout_width="177dp"
-                android:layout_height="77dp"
-                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
                 android:onClick="button7Click"
-                android:text="@string/vaccineBookCheck" />
+                android:text="@string/vaccineBookCheck"
+                android:translationY="30dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/covidinfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:text="@string/covidinfo"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_gravity="start"
+                android:layout_marginStart="10dp"
+                android:gravity="start"
+                android:onClick="button1Click"
+                android:text="@string/button_1"
+                android:translationY="30dp" />
+
+            <TextView
+                android:id="@+id/covidinfo1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="10dp"
+                android:text="@string/covidinfo1"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginStart="10dp"
+                android:onClick="button2Click"
+                android:text="@string/button_3"
+                android:translationY="30dp" />
+
+            <TextView
+                android:id="@+id/covidinfo2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="10dp"
+                android:text="@string/covidinfo2"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/button4"
+                android:layout_width="202dp"
+                android:layout_height="61dp"
+                android:layout_gravity="center"
+                android:onClick="button4Click"
+                android:text="@string/button_4"
+                android:translationY="30dp" />
+
         </LinearLayout>
 
-    </LinearLayout>
-
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</ScrollView>

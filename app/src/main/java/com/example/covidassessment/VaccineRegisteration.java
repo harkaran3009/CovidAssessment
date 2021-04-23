@@ -121,9 +121,16 @@ public class VaccineRegisteration  extends AppCompatActivity implements View.OnC
             if (identity < 0) {
                 myDbAdapter.Message.message(context, "Unsuccessful");
             } else {
-                Intent intent = new Intent(this, VaccineRegisterResult.class);
+
+                Bundle b=new Bundle();
+                b.putStringArray("key", new String[] { t1,t7,t8,t6});
+                Intent i=new Intent(this, VaccineRegisterResult.class);
+                i.putExtras(b);
+
+                //i.putExtra("nameres", new String[] { name1,bookdate1,booktime1,centre1});
+                //Intent intent = new Intent(this, VaccineRegisterResult.class);
                 finish();
-                startActivity(intent);
+                startActivity(i);
             }
         }
     }
