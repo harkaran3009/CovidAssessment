@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.CheckBox;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AlertDialog;
@@ -19,11 +20,12 @@ import java.util.Locale;
 
 public class CovidTestBook extends AppCompatActivity {
 
-    EditText bookDate;
+    EditText bookDate, name, email;
     final Calendar myCalendar = Calendar.getInstance();
     CheckBox checkBoxTemp;
     TextView linkText;
     AlertDialog.Builder builder;
+    Spinner centre,booktime;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,6 +34,10 @@ public class CovidTestBook extends AppCompatActivity {
         checkBoxTemp = (CheckBox) findViewById(R.id.checkBoxTestBook) ;
         linkText = (TextView) findViewById(R.id.covidbooking7);
         linkText.setMovementMethod(LinkMovementMethod.getInstance());
+        centre = (Spinner) findViewById(R.id.bookingcenter);
+        booktime = (Spinner) findViewById(R.id.bookingtime);
+        name = (EditText) findViewById(R.id.covidname);
+        email = (EditText) findViewById(R.id.covidemail);
 
         DatePickerDialog.OnDateSetListener date = new DatePickerDialog.OnDateSetListener() {
 
@@ -75,6 +81,7 @@ public class CovidTestBook extends AppCompatActivity {
     }
 
     public void covidbookClick(View view) {
+        Intent intent = new Intent(this,TestBookStatus.class);
         if(!checkBoxTemp.isChecked())
         {
             builder = new AlertDialog.Builder(this);
@@ -83,7 +90,46 @@ public class CovidTestBook extends AppCompatActivity {
             alert.setMessage("Please check the box to give your consent");
             alert.show();
         }
+        else if((name.getText().toString() == null || name.getText().toString().isEmpty())
+                || (email.getText().toString() == null || email.getText().toString().isEmpty())
+                || (bookDate.getText().toString() == null || bookDate.getText().toString().isEmpty()))
+        {
+            builder = new AlertDialog.Builder(this);
+            AlertDialog alert = builder.create();
+            alert.setTitle("Alert");
+            alert.setMessage("Please provide all the values");
+            alert.show();
+        }
+        else
+        {
+
+
+
+            System.out.println(name.getText().toString());
+            System.out.println( bookDate.getText().toString());
+            System.out.println(booktime.getSelectedItem().toString());
+            System.out.println(centre.getSelectedItem().toString());
+            String name1 = name.getText().toString();
+            String bookdate1 =  bookDate.getText().toString();
+            String booktime1 = booktime.getSelectedItem().toString();
+            String centre1 = centre.getSelectedItem().toString();
+            Bundle b=new Bundle();
+            b.putStringArray("key", new String[] { name1,bookdate1,booktime1,centre1});
+            Intent i=new Intent(this, TestBookStatus.class);
+            i.putExtras(b);
+
+            intent.putExtra("nameres", new String[] { name1,bookdate1,booktime1,centre1});
+            startActivity(i);
+
+        }
 
     }
+
+   /* public void onPause(Bundle savedInstanceState){
+        CovidTestBook.this.finish();
+    }
+    public void onResume(Bundle savedInstanceState){
+        CovidTestBook.this.finish();
+    }*/
 
 }

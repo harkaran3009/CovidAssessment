@@ -16,6 +16,7 @@
         <activity android:name=".VaccineBookCheck"></activity>
         <activity android:name=".CovidTestBook"></activity>
         <activity android:name=".CovidInfo"></activity>
+        <activity android:name=".TestBookStatus"></activity>
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"

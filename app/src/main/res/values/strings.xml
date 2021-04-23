@@ -98,7 +98,7 @@
         <item>Michael Garron Hospital</item>
     </string-array>
     <string-array name="covidtesttime">
-        <item>8:00-9.00</item>
+        <item>8:00-9:00</item>
         <item>9:00-10:00</item>
         <item>10:00-11:00</item>
         <item>11:00-12:00</item>
@@ -129,5 +129,9 @@
     <string name="validdate1">Valid on</string>
     <string name="validrules1">Next Steps:</string>
     <string name="validrules2">Tell your employer about this result</string>
+
+    <string name="covidtest1"></string>
+    <string name="covidtest2">Upcoming booking for</string>
+
 
 </resources>
