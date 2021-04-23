@@ -42,6 +42,16 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(MainActivity.this, VaccineBookCheck.class);
         startActivity(intent);
     }
+
+    public void button2Click(View view) {
+        Intent intent = new Intent(MainActivity.this, CovidTestBook.class);
+        startActivity(intent);
+    }
+
+    public void button4Click(View view) {
+        Intent intent = new Intent(MainActivity.this, CovidInfo.class);
+        startActivity(intent);
+    }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.

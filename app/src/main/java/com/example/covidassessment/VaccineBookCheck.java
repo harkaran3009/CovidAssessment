@@ -8,6 +8,7 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
@@ -19,6 +20,7 @@ public class VaccineBookCheck extends AppCompatActivity{
     myDbAdapter helper;
     Context context;
     ArrayList<String> values = new ArrayList<String>();
+    AlertDialog.Builder builder;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,10 +37,21 @@ public class VaccineBookCheck extends AppCompatActivity{
         String t1 = dropdownid.getSelectedItem().toString();
         String t2 = identification.getText().toString();
         values = helper.fetchData(t1,t2);
-        String name = values.get(0);
-        String centre = values.get(1);
-        String date = values.get(2);
-        textViewEmpty.setText("Patient : " +name + " has Covid Test Booked at " + centre + " on " + date);
+        if(values.get(0) == "false")
+        {
+            builder = new AlertDialog.Builder(this);
+            AlertDialog alert = builder.create();
+            alert.setTitle("Alert");
+            alert.setMessage("No Matching Record Found");
+            alert.show();
+        }
+        else
+        {
+            String name = values.get(0);
+            String centre = values.get(1);
+            String date = values.get(2);
+            textViewEmpty.setText("Patient : " +name + " has Covid Test Booked at " + centre + " on " + date);
+        }
 
 
     }

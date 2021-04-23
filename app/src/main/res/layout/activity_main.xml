@@ -77,6 +77,7 @@
                     android:layout_gravity="center"
                     android:foregroundGravity="center_vertical"
                     android:gravity="center"
+                    android:onClick="button2Click"
                     android:text="@string/button_3"
                     android:translationY="35dp" />
             </LinearLayout>
@@ -100,6 +101,7 @@
                     android:layout_width="177dp"
                     android:layout_height="77dp"
                     android:layout_gravity="center"
+                    android:onClick="button4Click"
                     android:text="@string/button_4"
                     android:translationY="35dp" />
             </LinearLayout>

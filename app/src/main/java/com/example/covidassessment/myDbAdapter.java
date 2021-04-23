@@ -20,9 +20,10 @@ public class myDbAdapter  {
         helper = new myDbHelper(context);
     }
 
-    public long insertData(String name, String address,String identType, String identNumber, String eligibleGroup, String centre, String date )
+    public long insertData(String name, String address,String identType, String identNumber, String eligibleGroup, String centre, String date,String timeslot )
     {
         SQLiteDatabase db = helper.getWritableDatabase();
+        db.beginTransaction();
         ContentValues contentValues = new ContentValues();
         contentValues.put(myDbHelper.NAME, name);
         contentValues.put(myDbHelper.ADDRESS, address);
@@ -31,7 +32,14 @@ public class myDbAdapter  {
         contentValues.put(myDbHelper.ELIGIBLEGROUP, eligibleGroup);
         contentValues.put(myDbHelper.CENTRE, centre);
         contentValues.put(myDbHelper.DATE, date);
+        contentValues.put(myDbHelper.TIME_SLOT, timeslot);
         long id = db.insert(myDbHelper.TABLE_NAME, null , contentValues);
+        if (id != -1)
+        {
+            db.setTransactionSuccessful();
+            db.endTransaction();
+            db.close();
+        }
         return id;
     }
     public ArrayList<String> fetchData(String identType, String identNumber)
@@ -47,6 +55,10 @@ public class myDbAdapter  {
             values.add(cursor.getString(cursor.getColumnIndex("Name")));
             values.add(cursor.getString(cursor.getColumnIndex("Centre")));
             values.add(cursor.getString(cursor.getColumnIndex("Date")));
+        }
+        else
+        {
+            values.add("false");
         }
 
 
@@ -69,9 +81,10 @@ public class myDbAdapter  {
        private static final String ELIGIBLEGROUP= "Eligible_Group";
        private static final String CENTRE= "Centre";
        private static final String DATE= "Date";
+       private static final String TIME_SLOT= "Time_Slot";
        private static final String CREATE_TABLE = "CREATE TABLE "+TABLE_NAME +
                "( "+UID+" INTEGER PRIMARY KEY AUTOINCREMENT ," +NAME+ " VARCHAR(225) ," + ADDRESS+" VARCHAR(225)," + IDENTIFICATION_TYPE + " VARCHAR(255), " +
-               IDENTIFICATION_NUMBER + " VARCHAR(255)," + ELIGIBLEGROUP + " VARCHAR(255), " + CENTRE + " VARCHAR(255), " +DATE+ " VARCHAR(20)" + ");";
+               IDENTIFICATION_NUMBER + " VARCHAR(255)," + ELIGIBLEGROUP + " VARCHAR(255), " + CENTRE + " VARCHAR(255), " +DATE+ " VARCHAR(20), " + TIME_SLOT +" VARCHAR(20) " +");";
       // private static final String DROP_TABLE ="DROP TABLE IF EXISTS "+TABLE_NAME;
        private Context context;
 
@@ -84,7 +97,6 @@ public class myDbAdapter  {
        @Override
        public void onCreate(SQLiteDatabase db) {
            try {
-
                db.execSQL(CREATE_TABLE);
                Message.message(context,"TABLE CREATED");
            } catch (Exception e) {

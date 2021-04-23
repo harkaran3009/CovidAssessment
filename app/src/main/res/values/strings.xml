@@ -40,11 +40,14 @@
     <string name="eligible">Eligible Group</string>
     <string name="date">Date</string>
     <string name="centre">Centre</string>
+    <string name="timeslot">Time Slot</string>
+
     <string name="submit">Submit</string>
     <string name="dateFormat">dd/mm/yyyy</string>
     <string name="vaccineBookCheck">Check Vaccine Booking</string>
     <string name="vaccineBookCheckTitle">Check your booking details</string>
     <string name="fetchBookingdetail">Fetch Details</string>
+
 
     <string-array name="id_type">
         <item>Driving License</item>
@@ -64,10 +67,67 @@
         <item>SD Hospital, Scarborough</item>
     </string-array>
 
+    <string name="covidbooking1">Booking an appointment online</string>
+    <string name="covidbooking2">To get tested at any COVID-19 Assessment Centre you must meet the criteria listed below and book an appointment online.</string>
+    <string name="covidbooking3"> &#x2713; Showing symptoms of COVID-19</string>
+    <string name="covidbooking4">&#x2713; Been exposed to a confirmed case of COVID-19 as informed by public health or through the COVID alert app</string>
+    <string name="covidbooking5">&#x2713; Working or living in a setting that has a COVID-19 outbreak as identified by public health</string>
+    <string name="covidbooking6">&#x2713; Been selected by the Ministry of Health for a targeted testing campaign</string>
+    <string name="covidbooking7">If you do not meet any above criteria , <a href="https://news.ontario.ca/en">
+        please visit a Ministry authorized pharmacy for testing.</a></string>
+    <string name="covidbooking8">IF YOU ARE HAVING AN EMERGENCY OR IF YOU ARE HAVING A CHEST PAIN OR DIFFICULTY BREATHING PLEASE GO TO THE EMERGENCY DEPARTMENT IN ANY HOSPITAL.</string>
+    <string name="covidbooking9">Please Select Assessment Center</string>
+    <string name="coviddate">Select Date </string>
+    <string name="covidtime">Select Time</string>
+    <string name="coviddetails1">Add your details</string>
+    <string name="coviddetails2">Name</string>
+    <string name="coviddetails3">Email</string>
+    <string name="covidagree">I have read the list of who is eligible to get tested and I attest that I fit in one of those groups and I consent to
+        utilizing the collected information as part of my medical record</string>
+    <string name="covidbook">Book</string>
+    <string name="covidbookdate">Select Date</string>
+    <string name="coviddata1">COVID-19 DATA</string>
 
 
+    <string-array name="covidassessmentcenter">
+        <item>Scarborough Health Network- General Hospital</item>
+        <item>Centre for Immigrant and Community Services (CICS)</item>
+        <item>University of Toronto - Scarborough Campus</item>
+        <item>Warden Woods (Scarborough)</item>
+        <item>Oakridge (Scarborough)</item>
+        <item>Michael Garron Hospital</item>
+    </string-array>
+    <string-array name="covidtesttime">
+        <item>8:00-9.00</item>
+        <item>9:00-10:00</item>
+        <item>10:00-11:00</item>
+        <item>11:00-12:00</item>
+        <item>12:00-13:00</item>
+        <item>13:00-14:00</item>
+        <item>14:00-15:00</item>
+        <item>15:00-16:00</item>
+        <item>16:00-17:00</item>
+    </string-array>
 
+    <!-- Covid Infor Page -->
+    <string name ="covidtotal">Total Cases&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;432,805</string>
+    <string name ="covidresolve">Resolved&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+                    &#160;&#160;&#160;&#160;383,014</string>
+    <string name ="covidd">Deaths&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+                    &#160;&#160;&#160;&#160;&#160;&#160;&#160;7,829</string>
+    <string name ="covidhos">Hospitalized&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;2,350</string>
+    <string name ="covidi">In ICU&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+                    &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;806</string>
+    <string name ="covidiv">In ICU on Ventilator&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;588</string>
+    <string name="covidnum">Numbers above were last updated on April 22, 2021, at 10:30 a.m</string>
+    <string name="covidmoreinfo">For more information on COVID-19, <a href="https://en.wikipedia.org/wiki/Template:COVID-19_pandemic_data/Canada_medical_cases_by_province">
+                Please click here</a></string>
 
-
+    <!-- Covid Assessment Page -->
+    <string name="covidscrres">COVID-19 Screening Result</string>
+    <string name="covid1"></string>
+    <string name="validdate1">Valid on</string>
+    <string name="validrules1">Next Steps:</string>
+    <string name="validrules2">Tell your employer about this result</string>
 
 </resources>
