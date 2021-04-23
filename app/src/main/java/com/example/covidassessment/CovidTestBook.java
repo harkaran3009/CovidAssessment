@@ -30,7 +30,7 @@ public class CovidTestBook extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.covid_booking);
-        //bookDate= (EditText) findViewById(R.id.coviddate);
+        bookDate= (EditText) findViewById(R.id.coviddate);
         checkBoxTemp = (CheckBox) findViewById(R.id.checkBoxTestBook) ;
         linkText = (TextView) findViewById(R.id.covidbooking7);
         linkText.setMovementMethod(LinkMovementMethod.getInstance());
@@ -47,7 +47,7 @@ public class CovidTestBook extends AppCompatActivity {
         Calendar sevenDaysLater = (Calendar) today.clone();
         sevenDaysLater.add(Calendar.DATE, 7);
 
-        bookDate.setOnClickListener(new View.OnClickListener() {
+        /*bookDate.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
@@ -69,8 +69,8 @@ public class CovidTestBook extends AppCompatActivity {
 
 
             }
-        });
-        /*DatePickerDialog.OnDateSetListener date = new DatePickerDialog.OnDateSetListener() {
+        });*/
+        DatePickerDialog.OnDateSetListener date = new DatePickerDialog.OnDateSetListener() {
 
 
             @Override
@@ -101,7 +101,7 @@ public class CovidTestBook extends AppCompatActivity {
                 dp.show();
 
             }
-        });*/
+        });
 
     }
     private void updateLabel() {
